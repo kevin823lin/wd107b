@@ -19,7 +19,7 @@ td {
 table, th, td {
     border: 1px solid black;
     padding: 10px;
-    margin: 0px;
+    margin: 10px;
 }
 button {
     background-color:#000000;
@@ -30,12 +30,15 @@ button {
     border: 1px solid black;
     border-radius: 5px;
 }
-#b1 {
-    background-color: aquamarine;
-}
 .a{
     background-color: darkgoldenrod;
 }
 .b{
     background-color: darkred;
+}
+input:not([type="radio"]){
+    width: 10em;
+}
+div[id="header"]{
+    background-color:#24292E;
 }
