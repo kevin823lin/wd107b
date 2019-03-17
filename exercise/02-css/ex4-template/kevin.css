@@ -1,0 +1,44 @@
+h4 {color: blue}
+body {
+    padding: 0px;
+    margin: 0px;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    padding: 10px;
+    background-color: black;
+    color:white;
+}
+td {
+    padding: 10px;
+    background-color: white;
+    color:black;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+button {
+    background-color:#000000;
+	color:#ffffff;
+    padding: 20px;
+    font-size: 20px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.a{
+    background-color: darkgoldenrod;
+}
+.b{
+    background-color: darkred;
+}
+input:not([type="radio"]){
+    width: 10em;
+}
+div[id="header"]{
+    background-color:#24292E;
+}
