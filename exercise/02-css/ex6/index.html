@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>有功能表的網頁</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            height: 50px;
+            font-size: 30px;
+            line-height: 30px;
+            background-color: #00314F;
+            font-weight: bold;
+        }
+
+        .navbar:not(.dropdown-content) {
+            z-index: 2;
+        }
+
+        .navbar a {
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            float: left;
+            display: block;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #3e8e41;
+        }
+
+        .dropbtn {
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            float: right;
+            min-width: 150px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            right: 0px;
+            z-index: -1;
+            min-width: 150px;
+            text-align: left;
+            top: 50px;
+        }
+
+        .dropdown-content li {
+            list-style-type: none;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 0px;
+            text-decoration: none;
+            display: block;
+            float: right;
+            min-width: 150px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #e0e0e0
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .sidebar {
+            float: left;
+            background-color: #FCE4AB;
+            position: fixed;
+            width: 100px;
+            height: 1000px;
+            top: 50px;
+            left: 0;
+            z-index: 1;
+            transition: width 1.5s;
+            overflow: hidden;
+        }
+
+        .content {
+            position: absolute;
+            right: 0px;
+            background-color: #85AB94;
+            left: 140px;
+            top: 50px;
+            z-index: 0;
+            transition: left 1.5s;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .sidebar {
+                width: 20px;
+            }
+
+            .content {
+                left: 20px;
+            }
+
+            .sidebar:hover {
+                width: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <li><a href="#">text1</a></li>
+                <li><a href="#">text2</a></li>
+                <li><a href="#">text3</a></li>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>螢幕寬度不一樣會有不同的畫面哦</h1>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+        <p>23</p>
+        <p>24</p>
+        <p>25</p>
+    </div>
+</body>
+
+</html>
