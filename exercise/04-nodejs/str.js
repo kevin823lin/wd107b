@@ -1,3 +1,3 @@
-str="sTr";
-str=str.toLowerCase();
+str = "sTr";
+str = str.toLowerCase();
 console.log(str);
