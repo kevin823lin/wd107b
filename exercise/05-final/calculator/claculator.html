@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>計算機</title>
+    <meta charset="UTF-8">
+    <style>
+        input {
+            width: 50px;
+        }
+
+        .num button {
+            height: 50px;
+            width: 50px;
+        }
+
+        #radio input {
+            height: 15px;
+            width: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function claculator() {
+            var a = document.getElementById("a");
+            var op = document.getElementById("op");
+            var b = document.getElementById("b");
+            var result = document.getElementById("result");
+            result.innerText = eval(a.value + op.value + b.value);
+        }
+        function num(n) {
+            var a = document.getElementById("a")
+            var b = document.getElementById("b")
+            if (n === "C") {
+                console.log("clear");
+                var a = document.getElementById("a")
+                var b = document.getElementById("b")
+                a.value = 0;
+                b.value = 0;
+            }
+            else {
+                if (document.form.ab[0].checked) {
+                    if (a.value == 0)
+                        a.value = n;
+                    else
+                        a.value += n;
+                }
+                else {
+                    if (b.value == 0)
+                        b.value = n;
+                    else
+                        b.value += n;
+                }
+            }
+        }
+        /*function clear() {
+            console.log("clear");
+            var a = document.getElementById("a")
+            var b = document.getElementById("b")
+            a.value = 0;
+            b.value = 0;
+        }*/
+    </script>
+
+    <div class=text>
+        <input id="a" type="number" value="0">
+        <select id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input id="b" type="number" value="0">
+        =
+        <label id="result"></label>
+        <br>
+        <br>
+    </div>
+    <br>
+    <form id="radio" name="form">
+        <input type="radio" name="ab" value="a" checked="true">a
+        <input type="radio" name="ab" value="b">b
+    </form>
+    <div class="num">
+        <button onclick="num(7)">7</button>
+        <button onclick="num(8)">8</button>
+        <button onclick="num(9)">9</button>
+        <br>
+        <button onclick="num(4)">4</button>
+        <button onclick="num(5)">5</button>
+        <button onclick="num(6)">6</button>
+        <br>
+        <button onclick="num(1)">1</button>
+        <button onclick="num(2)">2</button>
+        <button onclick="num(3)">3</button>
+        <br>
+        <button onclick="num(0)">0</button>
+        <button onclick="num('C')">C</button>
+        <button onclick="claculator()">計算</button>
+    </div>
+
+</body>
+
+</html>
