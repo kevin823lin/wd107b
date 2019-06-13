@@ -5,7 +5,7 @@
 
 ## 主專案大致上分成三個區塊
 
-# 1.導航欄
+### 1.導航欄
 導航欄使用固定定位（position: fixed）將其固定於視窗上方
 
 HTML:
@@ -31,43 +31,30 @@ CSS:
         .
         .
     }
+
+導航欄上的下拉式選單，游標移到dropbtn時(:hover)，會出現下拉式選單
+
 下拉式選單CSS:
 
     .dropbtn {
-        font-weight: bold;
-        background-color: rgba(0, 0, 0, 0);
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        float: right;
-        min-width: 150px;
+        .
+        .
     }
 
     .dropdown-content {
         display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        right: 0px;
-        z-index: -1;
-        min-width: 150px;
-        text-align: left;
-        top: 50px;
+        .
+        .
     }
 
     .dropdown-content li {
-        list-style-type: none;
+        .
+        .
     }
 
     .dropdown-content a {
-        color: black;
-        padding: 12px 0px;
-        text-decoration: none;
-        display: block;
-        float: right;
-        min-width: 150px;
+        .
+        .
     }
 
     .dropdown-content a:hover {
