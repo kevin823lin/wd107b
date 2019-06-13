@@ -3,12 +3,12 @@
 
 [成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/)
 
-## 主專案大致上分成三個區塊
+## 專案架構大致分成三個區塊
 
 ### 1.導航欄
 導航欄使用固定定位（position: fixed）將其固定於視窗上方
 
-HTML:
+**HTML:**
 
     <div class="navbar">
         <button id="sidebtn" style="background: none;" onclick="sidebtn()"><i class="fa fa-bars"></i></button>
@@ -24,7 +24,7 @@ HTML:
         </div>
     </div>
 
-CSS:
+**CSS:**
 
     .navbar {
         position: fixed;
@@ -34,7 +34,7 @@ CSS:
 
 導航欄上的下拉式選單，游標移到dropbtn時(:hover)，會出現下拉式選單
 
-下拉式選單CSS:
+**下拉式選單CSS:**
 
     .dropbtn {
         .
@@ -68,6 +68,34 @@ CSS:
     .dropdown:hover .dropbtn {
         background-color: #3e8e41;
     }
+
+### 2.側邊欄
+放置各個小專案的位置
+利用導航欄上的側邊藍圖示開關側邊欄
+
+**側邊欄開關函式JS:**
+
+    function sidebtn() {
+        var sidebar = document.getElementsByClassName("sidebar");
+        var content = document.getElementsByClassName("content");
+        if (sidebar[0].style.width == "0px") {
+            for (let i = 0; i < sidebar.length; i++)
+                sidebar[i].style.width = "140px";
+            for (let i = 0; i < content.length; i++)
+                content[i].style.left = "140px";
+        }
+        else {
+            for (let i = 0; i < sidebar.length; i++)
+                sidebar[i].style.width = "0px";
+            for (let i = 0; i < content.length; i++)
+                content[i].style.left = "0px";
+        }
+    }
+
+### 3.內文
+呈現各個小專案的位置
+
+## 各個小專案
 
 ### 1. 鬼畫符
 [專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/canvas)
