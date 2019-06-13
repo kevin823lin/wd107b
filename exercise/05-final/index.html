@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="claculator/calculator.css">
 </head>
 
-<body>
-    <script src="calculator.js"></script>
+<body onload="hashchange();setCanvas();" onhashchange="hashchange()">
+    <script src="claculator/calculator.js"></script>
+    <script src="canvas/canvas.js"></script>
     <script>
+
         function sidebtn() {
             var sidebar = document.getElementsByClassName("sidebar");
             var content = document.getElementsByClassName("content");
@@ -26,6 +28,32 @@
                     sidebar[i].style.width = "0px";
                 for (let i = 0; i < content.length; i++)
                     content[i].style.left = "0px";
+            }
+        }
+
+        function hashchange() {
+            console.log("tttttt");
+            console.log(location.hash);
+            var welcome = document.getElementById("welcome");
+            var calculator = document.getElementById("calculator");
+            var canvas = document.getElementById("canvas");
+            const block = "block", none = "none";
+            switch (location.hash) {
+                case "#welcome":
+                    welcome.style.display = block;
+                    calculator.style.display = none;
+                    canvas.style.display = none;
+                    break;
+                case "#calculator":
+                    welcome.style.display = none;
+                    calculator.style.display = block;
+                    canvas.style.display = none;
+                    break;
+                case "#canvas":
+                    welcome.style.display = none;
+                    calculator.style.display = none;
+                    canvas.style.display = block;
+                    break;
             }
         }
     </script>
@@ -43,11 +71,11 @@
             </div>
         </div>
     </div>
-    <div class="sidebar" style="width: 0px;"">
+    <div class="sidebar" style="width: 0px;">
         <ul>
-            <li><a href=" #welcome">歡迎</a></li>
-        <li><a href="#calculator">CSS</a></li>
-        <li><a href="#canvas">JavaScript</a></li>
+            <li><a href="#welcome">歡迎</a></li>
+            <li><a href="#calculator">計算機</a></li>
+            <li><a href="#canvas">鬼畫符</a></li>
         </ul>
     </div>
     <div class="content">
@@ -93,16 +121,15 @@
                 <button onclick="claculator()">計算</button>
             </div>
 
-            <div id="canvas" style="display: block;">
-                <button onclick="startDraw()">開始</button>
-                <button onclick="pauseDraw()">暫停</button>
-                <button onclick="clean()">清除</button>
-                <button id="buttonSave" onclick="save()">存檔</button>
-                <br>
-                <br>
-                <canvas id="myCanvas" height="600" width="800" style="border:1px solid #000000;"></canvas>
-                <script src="canvas/canvas.js"></script>
-            </div>
+        </div>
+        <div id="canvas" style="display: block;">
+            <button onclick="startDraw()">開始</button>
+            <button onclick="pauseDraw()">暫停</button>
+            <button onclick="clean()">清除</button>
+            <button id="buttonSave" onclick="save()">存檔</button>
+            <br>
+            <br>
+            <canvas id="myCanvas" height="600" width="800" style="border:1px solid #000000;"></canvas>
         </div>
     </div>
 </body>
