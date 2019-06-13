@@ -157,3 +157,28 @@
 [專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/claculator)
 
 [成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/#calculator)
+
+* ## 換頁方式
+
+辨識錨點，再利用JS控制區塊的可見度
+
+    <body onload="alert(..."hashchange();" onhashchange="hashchange()">
+        function hashchange() {
+            var home = document.getElementById("Home");
+    .
+    .
+            const block = "block", none = "none";
+            switch (location.hash) {
+                case "#home":
+                    home.style.display = block;
+                    dec.style.display = none;
+                    calculator.style.display = none;
+                    canvas.style.display = none;
+                    break;
+    .
+    .
+            }
+        }
+    .
+    .
+    </body>
