@@ -70,8 +70,8 @@
     }
 
 ### 2.側邊欄
-放置各個小專案的位置
-利用導航欄上的側邊藍圖示開關側邊欄
+放置各小專案連結的位置
+利用導航欄上的側邊欄圖示開關側邊欄
 
 **側邊欄開關函式JS:**
 
@@ -93,21 +93,23 @@
     }
 
 ### 3.內文
-呈現各個小專案的位置
+呈現各小專案的位置
 
-## 各個小專案
+## 各小專案
 
-### 1. 鬼畫符
-[專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/canvas)
+### 1. 主畫面
+
+### 2. 鬼畫符
+[專案位址與說明](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/canvas)
 
 [成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/canvas/canvas.html)
 
-### 2. 進位制換算
-[專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/dec)
+### 3. 進位制換算
+[專案位址與說明](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/dec)
 
 [成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/dec/dec.html)
 
-### 3. 計算機
-[專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/claculator)
+### 4. 計算機
+[專案位址與說明](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/claculator)
 
 [成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/claculator/claculator.html)
