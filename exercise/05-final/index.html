@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>有功能表的網頁</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="claculator/calculator.css">
+</head>
+
+<body>
+    <script src="calculator.js"></script>
+    <script>
+        function sidebtn() {
+            var sidebar = document.getElementsByClassName("sidebar");
+            var content = document.getElementsByClassName("content");
+            if (sidebar[0].style.width == "0px") {
+                for (let i = 0; i < sidebar.length; i++)
+                    sidebar[i].style.width = "140px";
+                for (let i = 0; i < content.length; i++)
+                    content[i].style.left = "140px";
+            }
+            else {
+                for (let i = 0; i < sidebar.length; i++)
+                    sidebar[i].style.width = "0px";
+                for (let i = 0; i < content.length; i++)
+                    content[i].style.left = "0px";
+            }
+        }
+    </script>
+
+    <div class="navbar">
+        <button id="sidebtn" style="background: none;" onclick="sidebtn()"><i class="fa fa-bars"></i></button>
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown<i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <li><a href="#">text1</a></li>
+                <li><a href="#">text2</a></li>
+                <li><a href="#">text3</a></li>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar" style="width: 0px;"">
+        <ul>
+            <li><a href=" #welcome">歡迎</a></li>
+        <li><a href="#calculator">CSS</a></li>
+        <li><a href="#canvas">JavaScript</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="welcome" style="display: block;">
+            <h1>歡迎來到我的網站</h1>
+        </div>
+
+        <div id="calculator" style="display: block;">
+            <div class=text>
+                <input id="a" type="number" value="0">
+                <select id="op">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input id="b" type="number" value="0">
+                =
+                <label id="result"></label>
+                <br>
+                <br>
+            </div>
+            <br>
+            <form id="radio" name="form">
+                <input type="radio" name="ab" value="a" checked="true">a
+                <input type="radio" name="ab" value="b">b
+            </form>
+            <div class="num">
+                <button onclick="num(7)">7</button>
+                <button onclick="num(8)">8</button>
+                <button onclick="num(9)">9</button>
+                <br>
+                <button onclick="num(4)">4</button>
+                <button onclick="num(5)">5</button>
+                <button onclick="num(6)">6</button>
+                <br>
+                <button onclick="num(1)">1</button>
+                <button onclick="num(2)">2</button>
+                <button onclick="num(3)">3</button>
+                <br>
+                <button onclick="num(0)">0</button>
+                <button onclick="clean()">C</button>
+                <button onclick="claculator()">計算</button>
+            </div>
+
+            <div id="canvas" style="display: block;">
+                <button onclick="startDraw()">開始</button>
+                <button onclick="pauseDraw()">暫停</button>
+                <button onclick="clean()">清除</button>
+                <button id="buttonSave" onclick="save()">存檔</button>
+                <br>
+                <br>
+                <canvas id="myCanvas" height="600" width="800" style="border:1px solid #000000;"></canvas>
+                <script src="canvas/canvas.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

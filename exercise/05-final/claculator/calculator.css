@@ -1,0 +1,13 @@
+input {
+    width: 50px;
+}
+
+.num button {
+    height: 50px;
+    width: 50px;
+}
+
+#radio input {
+    height: 15px;
+    width: 15px;
+}
