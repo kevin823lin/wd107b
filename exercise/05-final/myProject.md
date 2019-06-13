@@ -3,7 +3,7 @@
 
 [成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/)
 
-#主專案大致上分成三個區塊
+## 主專案大致上分成三個區塊
 
 # 1.導航欄
 導航欄使用固定定位（position: fixed）將其固定於視窗上方
