@@ -6,8 +6,8 @@ function claculator() {
     result.innerText = eval(a.value + op.value + b.value);
 }
 function num(n) {
-    var a = document.getElementById("a")
-    var b = document.getElementById("b")
+    var a = document.getElementById("a");
+    var b = document.getElementById("b");
     if (document.form.ab[0].checked) {
         if (a.value == 0)
             a.value = n;

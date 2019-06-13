@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="claculator/calculator.css">
+    <style>
+    #Calculator input{
+        width: 60px;
+    }
+    </style>
 </head>
 
 <body onload="hashchange();setCanvas();" onhashchange="hashchange()">
     <script src="claculator/calculator.js"></script>
     <script src="canvas/canvas.js"></script>
+    <script src="dec/dec.js"></script>
     <script>
 
         function sidebtn() {
@@ -32,25 +38,33 @@
         }
 
         function hashchange() {
-            console.log("tttttt");
-            console.log(location.hash);
-            var welcome = document.getElementById("welcome");
-            var calculator = document.getElementById("calculator");
-            var canvas = document.getElementById("canvas");
+            var home = document.getElementById("Home");
+            var dec = document.getElementById("Dec");
+            var calculator = document.getElementById("Calculator");
+            var canvas = document.getElementById("Canvas");
             const block = "block", none = "none";
             switch (location.hash) {
-                case "#welcome":
-                    welcome.style.display = block;
+                case "#home":
+                    home.style.display = block;
+                    dec.style.display = none;
+                    calculator.style.display = none;
+                    canvas.style.display = none;
+                    break;
+                case "#dec":
+                    home.style.display = none;
+                    dec.style.display = block;
                     calculator.style.display = none;
                     canvas.style.display = none;
                     break;
                 case "#calculator":
-                    welcome.style.display = none;
+                    home.style.display = none;
+                    dec.style.display = none;
                     calculator.style.display = block;
                     canvas.style.display = none;
                     break;
                 case "#canvas":
-                    welcome.style.display = none;
+                    home.style.display = none;
+                    dec.style.display = none;
                     calculator.style.display = none;
                     canvas.style.display = block;
                     break;
@@ -61,29 +75,36 @@
     <div class="navbar">
         <button id="sidebtn" style="background: none;" onclick="sidebtn()"><i class="fa fa-bars"></i></button>
         <a href="#home">Home</a>
-        <a href="#news">News</a>
+        <a href="https://news.google.com/?hl=zh-TW&gl=TW&ceid=TW:zh-Hant">News</a>
         <div class="dropdown">
-            <button class="dropbtn">Dropdown<i class="fa fa-caret-down"></i></button>
+            <button class="dropbtn">聯絡我 <i class="fa fa-caret-down"></i></button>
             <div class="dropdown-content">
-                <li><a href="#">text1</a></li>
-                <li><a href="#">text2</a></li>
-                <li><a href="#">text3</a></li>
+                <li><a href="https://www.facebook.com/Kevin.abcdefg">&nbsp;Facebook</a></li>
+                <li><a href="https://www.instagram.com/hao.823/">&nbsp;Instagram</a></li>
+                <li><a href="mailto:s110710528@gmail.com">&nbsp;Email</a></li>
             </div>
         </div>
     </div>
     <div class="sidebar" style="width: 0px;">
         <ul>
-            <li><a href="#welcome">歡迎</a></li>
-            <li><a href="#calculator">計算機</a></li>
             <li><a href="#canvas">鬼畫符</a></li>
+            <li><a href="#dec">進位制轉換</a></li>
+            <li><a href="#calculator">計算機</a></li>
         </ul>
     </div>
     <div class="content">
-        <div id="welcome" style="display: block;">
-            <h1>歡迎來到我的網站</h1>
+        <div id="Home" style="display: block;">
+            歡迎光臨
         </div>
 
-        <div id="calculator" style="display: block;">
+        <div id="Dec" style="display: none;">
+            Bin <input id="bin" type="number" value="0"><button id="binbtn" onclick="bin()">從二進制轉換</button><br>
+            Oct <input id="cot" type="number" value="0"><button id="cotbtn" onclick="cot()">從八進制轉換</button><br>
+            Dec <input id="dec" type="number" value="0"><button id="decbtn" onclick="dec()">從十進制轉換</button><br>
+            Hex <input id="hex" type="text" value="0"><button id="decbtn" onclick="hex()">從十六進制轉換</button><br>
+        </div>
+
+        <div id="Calculator" style="display: none;">
             <div class=text>
                 <input id="a" type="number" value="0">
                 <select id="op">
@@ -95,7 +116,6 @@
                 <input id="b" type="number" value="0">
                 =
                 <label id="result"></label>
-                <br>
                 <br>
             </div>
             <br>
@@ -120,9 +140,9 @@
                 <button onclick="clean()">C</button>
                 <button onclick="claculator()">計算</button>
             </div>
-
         </div>
-        <div id="canvas" style="display: block;">
+
+        <div id="Canvas" style="display: none;">
             <button onclick="startDraw()">開始</button>
             <button onclick="pauseDraw()">暫停</button>
             <button onclick="clean()">清除</button>

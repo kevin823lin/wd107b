@@ -106,6 +106,7 @@ body {
     z-index: 1;
     transition: width 1.5s;
     overflow: hidden;
+    white-space:nowrap;
 }
 
 .content {
