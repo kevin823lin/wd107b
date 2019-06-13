@@ -99,17 +99,61 @@
 
 ### 1. 主畫面
 
-### 2. 鬼畫符
-[專案位址與說明](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/canvas)
+嵌入喜愛的網紅影片
 
-[成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/canvas/canvas.html)
+[成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/)
+
+### 2. 鬼畫符
+
+利用canvas元素與random函式，使畫筆自己往從上下左右選一個方向行走並更改顏色，並且任意時間都可以暫停並保存作品
+因為是鬼畫符，所以一進到我的網頁，就算不是canvas錨點，畫畫也會默默地在背後進行
+
+    function draw() {
+        let r = Math.floor(Math.random() * 256), g = Math.floor(Math.random() * 256), b = Math.floor(Math.random() * 256);
+        ctx.strokeStyle = "rgb(" + r + "," + g + "," + b + ")";
+        let randX = Math.floor(Math.random() * 2);
+        if (randX == 0)
+            randX = -1;
+        let randY = Math.floor(Math.random() * 2);
+        if (randY == 0)
+            randY = -1;
+        .
+        .
+        x += randX;
+        .
+        .
+        y += randY;
+        .
+        .
+        ctx.lineTo(x, y);
+        ctx.stroke();
+        startDraw();
+    }
+
+[專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/canvas)
+
+[成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/#canvas)
 
 ### 3. 進位制換算
-[專案位址與說明](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/dec)
 
-[成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/dec/dec.html)
+利用parseInt(hex, 16)轉成10進位制，再利用toString(number)轉成任意進位制，我設計的程式中，2、8、10、16進位制皆可互轉
+
+    function hex() {
+        var temp = parseInt(h.value, 16);
+        b.value = temp.toString(2);
+        c.value = temp.toString(8);
+        d.value = temp.toString();
+        h.value = temp.toString(16);
+    }
+
+[專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/dec)
+
+[成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/#dec)
 
 ### 4. 計算機
-[專案位址與說明](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/claculator)
 
-[成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/claculator/claculator.html)
+利用鍵盤或螢幕上的按鍵輸入，並用eval函式進行運算
+
+[專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/claculator)
+
+[成果展示](https://kevin823lin.github.io/wd107b/exercise/05-final/#calculator)
