@@ -20,13 +20,6 @@ body {
     z-index: 2;
 }
 
-#sidebtn {
-    float: left;
-    border: none;
-    padding: 16px;
-    font-size: 17px;
-}
-
 .navbar a {
     background-color: rgba(0, 0, 0, 0);
     color: white;
@@ -41,6 +34,14 @@ body {
 
 .navbar a:hover {
     background-color: #3e8e41;
+}
+
+
+#sidebtn {
+    float: left;
+    border: none;
+    padding: 16px;
+    font-size: 17px;
 }
 
 .dropbtn {
@@ -90,10 +91,6 @@ body {
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
 }
 
 .sidebar {
