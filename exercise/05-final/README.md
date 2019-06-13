@@ -152,7 +152,7 @@
 
 ### 4. 計算機
 
-利用eval函式進行運算
+利用鍵盤或螢幕上的按鍵輸入，並用eval函式進行運算
 
 [專案位址](https://github.com/kevin823lin/wd107b/tree/master/exercise/05-final/claculator)
 
