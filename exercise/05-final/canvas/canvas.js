@@ -10,6 +10,7 @@ window.onload = function () {
     x -= x % 20;
     y -= y % 20;
     ctx.moveTo((x - x % 20), (y - y % 20));
+    startDraw();
 }
 
 function draw() {
