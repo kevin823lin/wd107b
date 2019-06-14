@@ -6,8 +6,8 @@ function setCanvas() {
     c = document.getElementById("myCanvas");
     ctx = c.getContext("2d");
     ctx.beginPath();
-    ctx.fillStyle = "#FFFFFF";
-    ctx.fillRect(0, 0, c.width, c.height);
+    /*ctx.fillStyle = "#FFFFFF";
+    ctx.fillRect(0, 0, c.width, c.height);*/
     x = Math.floor(Math.random() * c.width);
     y = Math.floor(Math.random() * c.height);
     x -= x % 20;
